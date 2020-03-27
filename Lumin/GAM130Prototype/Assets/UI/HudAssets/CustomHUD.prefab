@@ -873,6 +873,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayLength: 59
+  hours: 0
+  minutes: 0
 --- !u!1 &4044174295977107425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +1481,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 03831f1e6affa154b8c0566ed7f62884, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 380330d324369f142b29c868099361ba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
