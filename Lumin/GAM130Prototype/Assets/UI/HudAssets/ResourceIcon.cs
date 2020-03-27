@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ResourceIcon : MonoBehaviour
 {
-    public Image icon;
+    //public Image icon;
     public Text amountDisplay;
 
     public void UpdateValue(int amount) 
@@ -13,9 +13,10 @@ public class ResourceIcon : MonoBehaviour
         amountDisplay.text = string.Format("X {0}", amount);   
     }
 
-    public void UpdateImage(Sprite newImage)
-    {
-        icon.sprite = newImage;
-    } 
-    
+    //public void updateimage(Sprite newimage)
+    //{
+    //    icon.sprite = newimage;
+    //}
+
 }
+
