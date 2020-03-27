@@ -2354,11 +2354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8920b0aa387b7854d9e3fca302dced98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  points: []
   moveSpeed: 0
   attackRadius: 0
   anim: {fileID: 1298787254220030013}
