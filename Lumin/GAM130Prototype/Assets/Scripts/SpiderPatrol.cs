@@ -25,7 +25,15 @@ public class SpiderPatrol : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
 
         agent.autoBraking = false;
-        GotoNextPoint();
+        NightSpawning();
+    }
+
+    void NightSpawning()
+    {
+        if (LightCycle.canSpiderSpawn == True)
+        {
+
+        }
     }
 
     void GotoNextPoint()
@@ -83,4 +91,5 @@ public class SpiderPatrol : MonoBehaviour
         }
         return false;
     }
+
 }
