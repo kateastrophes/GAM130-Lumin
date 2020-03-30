@@ -39,7 +39,6 @@ public class OxygenBarScript : MonoBehaviour
         {
             alpha = Mathf.Lerp(currentAlpha, targetAlpha, t);
 
-
             Image[] barChildren = OxygenBar.GetComponentsInChildren<Image>();
             Color newColour;            
             foreach (Image child in barChildren)
@@ -67,10 +66,9 @@ public class OxygenBarScript : MonoBehaviour
         increasingCurrent = false;
         decreasingCurrent = false;
         yield return 0;
-    }
-    
+    }    
 
-    public void addOxygen() 
+    public void addOxygen() // Add Canister Ammount
     {
         if (oxygen + addAmount > maxOxygen)
             oxygen = maxOxygen;
@@ -78,7 +76,6 @@ public class OxygenBarScript : MonoBehaviour
         else
             oxygen = oxygen + addAmount;
     }
-
     
     private void Update()
     {
