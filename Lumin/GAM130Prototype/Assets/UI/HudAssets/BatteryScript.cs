@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.Events;
-using System.Globalization;
-
 
 public class BatteryScript : MonoBehaviour
 {
@@ -71,7 +65,7 @@ public class BatteryScript : MonoBehaviour
 
     private void UpdateBattDisplay()
     {
-        BattCountDisplay.text = string.Format("X {0}", batteries);
+        BattCountDisplay.text = string.Format("{0}", batteries);
     }
 
     void Update()
