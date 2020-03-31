@@ -25,15 +25,6 @@ public class SpiderPatrol : MonoBehaviour
         anim = GetComponentInChildren<Animator>();
 
         agent.autoBraking = false;
-        NightSpawning();
-    }
-
-    void NightSpawning()
-    {
-        if (LightCycle.canSpiderSpawn == True)
-        {
-
-        }
     }
 
     void GotoNextPoint()
