@@ -5,9 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public int index;
     public void PlayGame()
     {
-        SceneManager.LoadScene("Lucy's Biodome");
+        SceneManager.LoadScene(index);
     }
 
         public void QuitGame()
