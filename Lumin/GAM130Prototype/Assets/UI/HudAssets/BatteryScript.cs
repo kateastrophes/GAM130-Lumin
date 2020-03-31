@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEditor.Events;
-using System.Globalization;
-
 
 public class BatteryScript : MonoBehaviour
 {
@@ -13,40 +7,27 @@ public class BatteryScript : MonoBehaviour
     [Range (0.1f,20)]
     public float decreaseAmmount = 0.1f;
     public bool torchUsed = false;    
-    public float displayCharge;
+    public float displayAmmount;
     private bool batteryPickup = false;
     private int fullCharge = 100;
     private float currentCharge = 0;
-    private string StrDisplayCharge;
 
-    
-    public Action OnBattUpdate;
-    public Text powerLevelText;
-    public ResourceIcon battIcon;
-
+    public Image BatteryBar;   
+    public Text BattCountDisplay; // no longer displayed as text 
 
     private void Awake()
-    {
-        OnBattUpdate += (() => UpdateBattDisplay());
+    {        
         UpdateBattDisplay();
     }
-
-
-
-    public void UpdateBattDisplay()
-    {
-        battIcon.UpdateValue(batteries);
-    }
-
 
     private void AddBattery()
     {
         batteries += 1;
         batteryPickup = false;
-        OnBattUpdate.Invoke();
+        UpdateBattDisplay();
     }
 
-    private void UsePower()
+    private void UsePower()  //decrease battery charge value as torch is used. 
     {
         if ( batteries == 0  && currentCharge <= 0)
         {
@@ -55,12 +36,10 @@ public class BatteryScript : MonoBehaviour
         else {
             if (torchUsed)
             {
-
                 if (currentCharge <= 0)
                 {
                     ChangeBattery();
                 }
-
                 else
                 {
                     currentCharge = currentCharge - decreaseAmmount * Time.deltaTime;                    
@@ -69,39 +48,35 @@ public class BatteryScript : MonoBehaviour
         }
     }
 
-    private void ChangeBattery()
+    private void ChangeBattery() 
     {
-        if (batteries == 0)
+        if (batteries == 0) // Error check if no batteries. 
         {
             //stop flashlight
             Debug.Log("stop flashlight");
         }
-
         if (batteries > 0)
         {
             batteries -= 1;
-        }
-        
-        currentCharge = fullCharge;
-        OnBattUpdate.Invoke();
+            currentCharge = fullCharge; // remove 1 battery reset charge
+            UpdateBattDisplay();
+        }                
     }
 
-
-
+    private void UpdateBattDisplay()
+    {
+        BattCountDisplay.text = string.Format("{0}", batteries);
+    }
 
     void Update()
     {
-        if (batteryPickup) AddBattery();
+        if (batteryPickup)
+        {
+            AddBattery();
+        }
 
-        UsePower();
-
-        
-        // need to display battery percentage in the text next to lightning bolt rounding within 5%? or to full number
-
-        
-        displayCharge = currentCharge / fullCharge * 100;
-
-        StrDisplayCharge = displayCharge.ToString("0.0", CultureInfo.InvariantCulture);
-        powerLevelText.text = StrDisplayCharge + "%";
+        UsePower();        
+        displayAmmount = currentCharge / fullCharge; // produces a number between 0-1 can be used to represent percentage
+        BatteryBar.fillAmount = displayAmmount;        
     }
 }
