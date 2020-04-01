@@ -1369,7 +1369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 99.6, y: -65.3}
+  m_AnchoredPosition: {x: -96.2, y: -65.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9167920038505195846
@@ -1551,7 +1551,7 @@ GameObject:
   - component: {fileID: 2364876609570654385}
   - component: {fileID: 6089913892496111436}
   m_Layer: 5
-  m_Name: ResetButton
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1574,7 +1574,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -97.5, y: -65.3}
+  m_AnchoredPosition: {x: 98.9, y: -65.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7121219224014826037
@@ -1656,7 +1656,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6081947145025577655, guid: c996b53e9f849234393d1e90f68d1679,
           type: 3}
-        m_MethodName: RestartScene
+        m_MethodName: Quitting
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1746,7 +1746,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Reset Level
+  m_Text: 'Quit
 
 '
 --- !u!1 &6923805398727312508

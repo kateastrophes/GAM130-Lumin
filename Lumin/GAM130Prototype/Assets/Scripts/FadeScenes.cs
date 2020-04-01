@@ -20,14 +20,17 @@ public class FadeScenes : MonoBehaviour
 
     public void ChangeScene()
     {
-        Debug.Log("wtf");
+        StartCoroutine(Fading(index));
+    }
+
+    public void BackToMenu()
+    {
         StartCoroutine(Fading(0));
     }
 
-    public void RestartScene()
+    public void Quitting()
     {
-        Debug.Log("wtf");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Application.Quit();
     }
 
     IEnumerator Fading(int index)
