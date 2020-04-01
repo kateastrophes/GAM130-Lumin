@@ -1451,7 +1451,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6081947145025577655, guid: c996b53e9f849234393d1e90f68d1679,
           type: 3}
-        m_MethodName: ChangeScene
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
