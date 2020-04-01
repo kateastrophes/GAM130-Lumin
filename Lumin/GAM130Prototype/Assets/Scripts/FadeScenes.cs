@@ -14,16 +14,26 @@ public class FadeScenes : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(Fading());
+            StartCoroutine(Fading(index));
         }
     }
 
     public void ChangeScene()
     {
-        StartCoroutine(Fading());
+        StartCoroutine(Fading(index));
     }
 
-    IEnumerator Fading()
+    public void BackToMenu()
+    {
+        StartCoroutine(Fading(0));
+    }
+
+    public void Quitting()
+    {
+        Application.Quit();
+    }
+
+    IEnumerator Fading(int index)
     {
         fadeAnim.SetBool("Fade", true);
         yield return new WaitUntil(() => blackScreen.color.a == 1);
