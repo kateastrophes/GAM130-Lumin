@@ -5,7 +5,7 @@ using UnityEngine;
 public class StartupScene : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.None;
