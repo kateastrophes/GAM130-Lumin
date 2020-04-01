@@ -5,45 +5,45 @@ using UnityEngine.UI;
 
 public class CardsFound : MonoBehaviour
 {
-   public bool redCardFound = false;
-   public bool greenCardFound = true;
+   public bool tealCardFound = false;
+   public bool blueCardFound = false;
 
     public GameObject iconsRegion;
     
     [SerializeField]
-    private Image Greencard;
+    private Image Bluecard;
     [SerializeField]
-    private Image Redcard;
+    private Image Tealcard;
 
     
 
-    private void checkCardsFound()
+    private void CheckCardsFound()
     {
-        if (greenCardFound)
+        if (blueCardFound)
         {
-            Color greenC = Greencard.color;
+            Color greenC = Bluecard.color;
             greenC.a = 1f;
-            Greencard.color = greenC;
+            Bluecard.color = greenC;
         }
         else
         {
-            Color greenC = Greencard.color;
-            greenC.a = 0.3f;
-            Greencard.color = greenC;
+            Color blueC = Bluecard.color;
+            blueC.a = 0.3f;
+            Bluecard.color = blueC;
 
         }
 
-        if (redCardFound)
+        if (tealCardFound)
         {
-            Color redC = Redcard.color;
+            Color redC = Tealcard.color;
             redC.a = 1f;
-            Redcard.color = redC;
+            Tealcard.color = redC;
         }
         else
         {
-            Color redC = Redcard.color;
-            redC.a = 0.3f;
-            Redcard.color = redC;
+            Color tealC = Tealcard.color;
+            tealC.a = 0.3f;
+            Tealcard.color = tealC;
 
         }
     }
@@ -54,9 +54,9 @@ public class CardsFound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {     
-        checkCardsFound();
+        CheckCardsFound();
 
-        if (redCardFound || greenCardFound)
+        if (tealCardFound || blueCardFound)
         {
             iconsRegion.SetActive(true);
         }

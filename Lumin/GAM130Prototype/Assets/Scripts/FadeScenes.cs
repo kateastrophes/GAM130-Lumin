@@ -8,24 +8,37 @@ public class FadeScenes : MonoBehaviour
     public int index;
 
     public Image blackScreen;
-    public Animator anim;
-    private void Start()
-    {
-        anim.SetBool("Fade", false);
-    }
+    public Animator fadeAnim;
 
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (other.CompareTag("Player"))
         {
-            StartCoroutine(Fading());
+            StartCoroutine(Fading(index));
         }
     }
 
-    IEnumerator Fading()
+    public void ChangeScene()
     {
-        anim.SetBool("Fade", true);
+        StartCoroutine(Fading(index));
+    }
+
+    public void BackToMenu()
+    {
+        StartCoroutine(Fading(0));
+    }
+
+    public void Quitting()
+    {
+        Application.Quit();
+    }
+
+    IEnumerator Fading(int index)
+    {
+        fadeAnim.SetBool("Fade", true);
         yield return new WaitUntil(() => blackScreen.color.a == 1);
         SceneManager.LoadScene(index);
     }
+
+
 }
