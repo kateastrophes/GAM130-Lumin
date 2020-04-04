@@ -5715,36 +5715,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &8153445442795960867
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6849942097419275915}
-  m_Layer: 0
-  m_Name: Lab_Stuff
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6849942097419275915
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8153445442795960867}
-  m_LocalRotation: {x: 0.51585823, y: -0.5158583, z: -0.48362207, w: 0.48362207}
-  m_LocalPosition: {x: 159.4, y: 162.81274, z: 252}
-  m_LocalScale: {x: 1.000001, y: 1.000001, z: 1.000001}
-  m_Children: []
-  m_Father: {fileID: 8449332419097895401}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: -93.69501, z: -90.00001}
 --- !u!1 &8163853204292654481
 GameObject:
   m_ObjectHideFlags: 0
@@ -8649,7 +8619,6 @@ Transform:
   - {fileID: 8449332419720531321}
   - {fileID: 3760349017822882934}
   - {fileID: 8449332418925085125}
-  - {fileID: 6849942097419275915}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
