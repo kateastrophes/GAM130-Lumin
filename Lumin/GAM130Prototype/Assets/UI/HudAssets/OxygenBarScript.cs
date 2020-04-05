@@ -1,11 +1,10 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class OxygenBarScript : MonoBehaviour
 {   
-    public bool decreasing = true;
+    public bool decreasing;
     public float maxOxygen = 100;
     private float oxygen;
     [Range(3, 30)]
@@ -14,6 +13,9 @@ public class OxygenBarScript : MonoBehaviour
     [Range(20,100)]
     public int addAmount = 30;
     public float barAlpha = 0;
+
+    [SerializeField]
+    public int plantsCount = 0;
 
     private Coroutine AlphaRoutine;    
     public GameObject OxygenBar;
@@ -26,7 +28,22 @@ public class OxygenBarScript : MonoBehaviour
         oxygen = maxOxygen;
         if (decreasing == true) barAlpha = 1f;
         else barAlpha = 0f; 
-    }   
+    }
+
+
+    public void checkedIfDecreasing()
+    {
+
+        if (plantsCount >= 1)
+        {
+            decreasing = true;
+        }
+        else
+        {
+            decreasing = false;
+        }
+
+    }
 
     IEnumerator lerpAlpha(float currentAlpha, float targetAlpha = 0f)
     {       
@@ -38,7 +55,6 @@ public class OxygenBarScript : MonoBehaviour
         while (t < 1f)
         {
             alpha = Mathf.Lerp(currentAlpha, targetAlpha, t);
-
 
             Image[] barChildren = OxygenBar.GetComponentsInChildren<Image>();
             Color newColour;            
@@ -67,10 +83,9 @@ public class OxygenBarScript : MonoBehaviour
         increasingCurrent = false;
         decreasingCurrent = false;
         yield return 0;
-    }
-    
+    }    
 
-    public void addOxygen() 
+    public void addOxygen() // Add Canister Ammount
     {
         if (oxygen + addAmount > maxOxygen)
             oxygen = maxOxygen;
@@ -78,7 +93,6 @@ public class OxygenBarScript : MonoBehaviour
         else
             oxygen = oxygen + addAmount;
     }
-
     
     private void Update()
     {
@@ -119,7 +133,7 @@ public class OxygenBarScript : MonoBehaviour
 
         if(oxygen <= 0)
         {
-            // kill player?
+            // kill player
         }
 
     }
