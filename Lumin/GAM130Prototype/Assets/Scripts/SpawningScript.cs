@@ -11,6 +11,9 @@ public class SpawningScript : MonoBehaviour
     public bool itemSpawned;
     public GameObject particleSFX;
     public Vector3 SpawnPos2;
+    public Animator m_doorAnimator;
+    public GameObject AlarmLights;
+    public bool openDoors;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,11 @@ public class SpawningScript : MonoBehaviour
             Instantiate(SpawnItem, SpawnPos, Quaternion.identity);
             Instantiate(particleSFX, SpawnPos2, Quaternion.identity);
             itemSpawned = false;
+            if (openDoors == true)
+            {
+                m_doorAnimator.SetBool("Open", true);
+                AlarmLights.SetActive(true);
+            }
         }
     }
 }
