@@ -26,7 +26,7 @@ public class OxygenBarScript : MonoBehaviour
     bool increasingCurrent = false;
     bool decreasingCurrent = false;
 
-    void Awake()
+    void Start()
     {
         oxygen = maxOxygen;
         if (decreasing == true) barAlpha = 1f;

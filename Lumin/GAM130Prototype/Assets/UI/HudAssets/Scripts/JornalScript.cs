@@ -81,6 +81,7 @@ public class JornalScript : MonoBehaviour
             jornalCanvas.SetActive(true);
             hudCanvas.SetActive(false);
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }    
 }
