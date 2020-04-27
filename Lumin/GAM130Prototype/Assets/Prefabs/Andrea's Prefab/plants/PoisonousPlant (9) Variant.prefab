@@ -47,7 +47,7 @@ PrefabInstance:
     - target: {fileID: 7905090981791982452, guid: 5af694a4614429243817bb7c17924f7d,
         type: 3}
       propertyPath: m_Name
-      value: PoisonousPlant (9)
+      value: PoisonousPlant (9) Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7905090981792153428, guid: 5af694a4614429243817bb7c17924f7d,
         type: 3}
@@ -129,7 +129,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: dbc8365ded5303c4cb81970eddb187f5, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2993832754983950594, guid: 5af694a4614429243817bb7c17924f7d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5af694a4614429243817bb7c17924f7d, type: 3}
 --- !u!1 &2568967490952662868 stripped
 GameObject:
