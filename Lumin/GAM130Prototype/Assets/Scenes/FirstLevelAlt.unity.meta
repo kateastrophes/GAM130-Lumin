@@ -1,13 +1,7 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Lumin/GAM130Prototype/Assets/New Terrain 3.asset.meta
-guid: bd2c92033e1186f4599060ff3685bb8b
-NativeFormatImporter:
-=======
-guid: 02910a1b19e4b0148a3bfcda9e3f51f1
+guid: 3fc58d6457c52034587c0a6c0af9995e
 DefaultImporter:
->>>>>>> master:Lumin/GAM130Prototype/Assets/Scenes/FirstLevelAlt.unity.meta
   externalObjects: {}
-  mainObjectFileID: 15600000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
