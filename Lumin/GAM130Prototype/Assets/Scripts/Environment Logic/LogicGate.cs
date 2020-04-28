@@ -24,7 +24,7 @@ public class LogicGate : MonoBehaviour
     public void setNextValue(bool value)
     {
         m_nextValue = value;
-        Debug.Log("next value " + value);
+        //Debug.Log("next value " + value);
     }
 
     void Start()

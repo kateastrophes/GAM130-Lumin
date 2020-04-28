@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Robin.unity
     guid: 667eaa00dddd66c4d87d3f5041307bdf
+  - enabled: 1
+    path: Assets/Scenes/Entrance Dome.unity
+    guid: 70faab4d2cd40374eb96047d27a7bbb4
   m_configObjects: {}
