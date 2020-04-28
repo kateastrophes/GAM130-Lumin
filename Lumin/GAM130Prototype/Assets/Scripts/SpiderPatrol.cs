@@ -13,6 +13,7 @@ public class SpiderPatrol : MonoBehaviour
     [SerializeField] private float attackRadius;
     [SerializeField] private float chaseRadius;
     public float moveSpeed;
+    public float waitDelay;
 
     // WAYPOINTS
     public Transform[] points;
@@ -59,7 +60,7 @@ public class SpiderPatrol : MonoBehaviour
     {
         // Make the spider wait for 10 seconds befor moving on the next waypoint.
         anim.SetBool("WalkForwards", false);
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(waitDelay);
         GotoNextPoint();
         Debug.Log("Delaying");
     }
