@@ -11,7 +11,7 @@ public class InteractableButton : Interactable
     [Tooltip("Prevents the button from being interacted with again for this many seconds. " +
         "ideally should be longer than any animations associated with it")]
     public float m_interactCooldown = 2f;
-    bool m_canInteract = true;
+    public bool m_canInteract = true;
     IEnumerator interactCooldown()
     {
         yield return new WaitForSeconds(m_interactCooldown);
