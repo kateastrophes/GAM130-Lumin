@@ -13,7 +13,7 @@ public class DoorControl : MonoBehaviour
     }
 
     private void Start() {
-        if(m_doorCollider != null) m_doorCollider.enabled = true;
+        m_doorCollider.enabled = true;
     }
 
     public void Open() {

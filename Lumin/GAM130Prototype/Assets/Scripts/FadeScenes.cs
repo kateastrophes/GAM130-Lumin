@@ -18,9 +18,9 @@ public class FadeScenes : MonoBehaviour
         }
     }
 
-    public void ChangeScene(string scene = "")
+    public void ChangeScene()
     {
-        StartCoroutine(Fading(index, scene));
+        StartCoroutine(Fading(index));
     }
 
     public void BackToMenu()
@@ -33,13 +33,12 @@ public class FadeScenes : MonoBehaviour
         Application.Quit();
     }
 
-    IEnumerator Fading(int index, string name = "")
+    IEnumerator Fading(int index)
     {
         fadeAnim.SetBool("Fade", true);
-
         yield return new WaitUntil(() => blackScreen.color.a == 1);
-
-        if (name == "") SceneManager.LoadScene(index);
-        else SceneManager.LoadScene(name);
+        SceneManager.LoadScene(index);
     }
+
+
 }
