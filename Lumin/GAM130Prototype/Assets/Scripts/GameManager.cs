@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour
     }
 
     //'global' objects
-    public static GameObject s_player;
+    public GameObject m_player = null;
     public static PlayerCharacterController s_playerCharacterController;
 
-    // Start is called before the first frame update
+    public SpawnpointManager.scenes m_scene = SpawnpointManager.scenes.NUM_SCENES;
+
     void Start()
     {
+        //ensure singleton
         if (s_this != null) {
             Destroy(gameObject);
             return;
@@ -23,13 +25,10 @@ public class GameManager : MonoBehaviour
         s_this = this;
 
         //get global objects
-        s_player = GameObject.Find("Player");
-        if (s_player != null) s_playerCharacterController = s_player.GetComponent<PlayerCharacterController>();
-    }
+        if(m_player == null) m_player = GameObject.Find("Player");
+        if (m_player != null) s_playerCharacterController = m_player.GetComponent<PlayerCharacterController>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        //set spawn point
+        if(m_scene != SpawnpointManager.scenes.NUM_SCENES) SpawnpointManager.setSpawn(m_player, m_scene);
+    }    
 }

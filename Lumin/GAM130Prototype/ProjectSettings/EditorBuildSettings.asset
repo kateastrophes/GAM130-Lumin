@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Entrance Dome.unity
     guid: 70faab4d2cd40374eb96047d27a7bbb4
+  - enabled: 1
+    path: Assets/Scenes/Robbie.unity
+    guid: c81d353c01c8bde4295ac6df10584d78
   m_configObjects: {}
