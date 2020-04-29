@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Robin.unity
     guid: 667eaa00dddd66c4d87d3f5041307bdf
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 5d0a14854c9afc34ba932f4a9353446d
   m_configObjects: {}
