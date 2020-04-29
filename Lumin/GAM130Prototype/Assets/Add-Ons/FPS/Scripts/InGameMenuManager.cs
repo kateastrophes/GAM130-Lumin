@@ -77,14 +77,14 @@ public class InGameMenuManager : MonoBehaviour
 
         }
 
-        if (Input.GetAxisRaw(GameConstants.k_AxisNameVertical) != 0)
-        {
-            if (EventSystem.current.currentSelectedGameObject == null)
-            {
-                EventSystem.current.SetSelectedGameObject(null);
-                lookSensitivitySlider.Select();
-            }
-        }
+        //if (Input.GetAxisRaw(GameConstants.k_AxisNameVertical) != 0)
+        //{
+        //    if (EventSystem.current.currentSelectedGameObject == null)
+        //    {
+        //        EventSystem.current.SetSelectedGameObject(null);
+        //        lookSensitivitySlider.Select();
+        //    }
+        //}
     }
 
     public void ClosePauseMenu()

@@ -24,7 +24,7 @@ public class LogicGate : MonoBehaviour
     public void setNextValue(bool value)
     {
         m_nextValue = value;
-        Debug.Log("next value " + value);
+        //Debug.Log("next value " + value);
     }
 
     void Start()
@@ -71,5 +71,12 @@ public class LogicGate : MonoBehaviour
         {
             Debug.LogError("A logic gate is trying to access a trigger that doesn't exist.");
         }
+    }
+
+    public void invoke() {
+        m_action.Invoke();
+    }
+    public void revoke() {
+        m_reverseAction.Invoke();
     }
 }
