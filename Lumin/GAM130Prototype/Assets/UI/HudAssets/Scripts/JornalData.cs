@@ -7,6 +7,7 @@ public class JornalData : ScriptableObject
 {
     public string logTitle;
     public string text;
+    public bool collected = false;
 
     public void RunMePlz()
     {
