@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractableItem : Interactable {
     public bool m_debug = false;
@@ -8,6 +9,8 @@ public class InteractableItem : Interactable {
     public PlayerInventory.items m_item;
 
     public GameObject m_parent = null;
+
+    public UnityEvent m_pickupAction;
 
     public bool m_canInteract = true;
     public void enableInteract(bool interact = true) {
@@ -39,6 +42,8 @@ public class InteractableItem : Interactable {
             Debug.Log("interact");
 
             PlayerInventory.obj().pickup(m_item);
+
+            m_pickupAction.Invoke();
 
             Destroy(m_parent);
         }
