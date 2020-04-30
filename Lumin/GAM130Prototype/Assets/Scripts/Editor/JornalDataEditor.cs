@@ -16,7 +16,8 @@ public class JornalDataEditor : Editor
         JornalData myTarget = (JornalData)target;
 
         myTarget.logTitle = EditorGUILayout.TextField("Log Title", myTarget.logTitle);
-       
+
+        myTarget.collected = EditorGUILayout.Toggle("collected", myTarget.collected);
 
         showText = EditorGUILayout.Foldout(showText, "Jornal Text");
 
