@@ -1,14 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Lumin/GAM130Prototype/Assets/Add-Ons/Aura 2/Core.meta
-guid: 29f72b54de7970644a274dcc04ecec3d
-folderAsset: yes
-DefaultImporter:
-=======
-guid: bd64b007887ce2746a04facc4f6063b7
+guid: ee99fed760b3d2e4f9acab545eeb7e98
 NativeFormatImporter:
->>>>>>> origin/HudBranch:Lumin/GAM130Prototype/Assets/UI/HudAssets/logs/(AD)LOG 1.asset.meta
   externalObjects: {}
-  mainObjectFileID: 11400000
+  mainObjectFileID: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
