@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class OxygenBarScript : MonoBehaviour
 {   
@@ -150,7 +152,7 @@ public class OxygenBarScript : MonoBehaviour
 
         if(oxygen <= 0)
         {
-            // kill player
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
     }
