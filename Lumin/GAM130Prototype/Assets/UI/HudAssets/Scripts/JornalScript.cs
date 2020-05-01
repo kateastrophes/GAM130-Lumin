@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class JornalScript : MonoBehaviour
 {
+    public static JornalScript instance;
 
     public GameObject logBTN;
     public GameObject jornalCanvas;
@@ -18,11 +19,11 @@ public class JornalScript : MonoBehaviour
 
     void Awake()
     {
+        instance = this;
         jornalCanvas.SetActive(false);
         hudCanvas.SetActive(true);
         Cursor.visible = false;
-
-        
+        addCollectedLogs();
     }
 
     [ContextMenu("Add Test Logs")]
@@ -34,15 +35,37 @@ public class JornalScript : MonoBehaviour
         AddLog("Log 3");
     }
 
+    [ContextMenu("reset Logs")]
+    public void resetLogs()
+    {
+        for (int i = 0; jornalDatas.Count > i; i++)
+        {
+            jornalDatas[i].collected = false;
+        }
+
+    }
+
     public void AddLog(string logName)
     {
        for (int i = 0; jornalDatas.Count > i; i++)
         {
             if (jornalDatas[i].logTitle == logName)
             {
+                jornalDatas[i].collected = true;
                 SetupButton(jornalDatas[i]);
             }
                     
+        }
+    }
+
+    void addCollectedLogs()
+    {
+        for(int i = 0; i < jornalDatas.Count; i++)
+        {
+            if(jornalDatas[i].collected == true)
+            {
+                AddLog(jornalDatas[i].logTitle);
+            }
         }
     }
 
@@ -75,6 +98,7 @@ public class JornalScript : MonoBehaviour
             jornalCanvas.SetActive(false);
             hudCanvas.SetActive(true);
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
