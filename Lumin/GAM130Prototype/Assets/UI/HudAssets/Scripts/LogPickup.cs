@@ -8,6 +8,10 @@ public class LogPickup : MonoBehaviour
 
     private void Awake()
     {
+        if (jornalData == null)
+        {
+            return;
+        }
         if (jornalData.collected == true)
         {
             Destroy(gameObject);

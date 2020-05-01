@@ -693,10 +693,15 @@ MonoBehaviour:
   LogTitle: {fileID: 5646572122014782889}
   LogText: {fileID: 3200647547828748941}
   jornalDatas:
-  - {fileID: 11400000, guid: dc4b2032b471d8f48bdca340944512d0, type: 2}
-  - {fileID: 11400000, guid: 16fe2370471c8ad439d3dbe312c4d6e2, type: 2}
-  - {fileID: 11400000, guid: ad569f39d06ff664489b96e6f2cd84a9, type: 2}
-  - {fileID: 11400000, guid: 4c799fa61c7c7e448949c41446245233, type: 2}
+  - {fileID: 11400000, guid: ee99fed760b3d2e4f9acab545eeb7e98, type: 2}
+  - {fileID: 11400000, guid: 6af2b6d88e9e7b849bffcdf96e9b1a22, type: 2}
+  - {fileID: 11400000, guid: 83dc148b76c256b41a6c2d82e0fa29a7, type: 2}
+  - {fileID: 11400000, guid: bedf3e17a196e0741b7d933c040f57ba, type: 2}
+  - {fileID: 11400000, guid: 8d8be44cb0112a5408958b2d6f360e45, type: 2}
+  - {fileID: 11400000, guid: 70ffde5d639c9a748b2375ac57f57cc4, type: 2}
+  - {fileID: 11400000, guid: 710f15cf93de7724eb7ba0c6ee48531e, type: 2}
+  - {fileID: 11400000, guid: 768abc3237317b840adaa9a508395dd1, type: 2}
+  - {fileID: 11400000, guid: aee0f16450e433c4b831ebac4cce2302, type: 2}
   logButtonParent: {fileID: 5115912621887676822}
 --- !u!114 &7818766884047114759
 MonoBehaviour:
@@ -2667,7 +2672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00018308347, y: 0.00006444411}
+  m_AnchoredPosition: {x: 0.00018308347, y: 0.00006848374}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &7061780436680229524
